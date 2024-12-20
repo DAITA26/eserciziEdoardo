@@ -1,0 +1,8 @@
+#file da escludere, non funzionali al progetto
+
+.DS_Store
+desktop.ini
+.vs/
+.idea/
+.vscode/
+.venv/
