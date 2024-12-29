@@ -30,12 +30,16 @@ while scelta_giocatore == numero_casuale:
     numero_casuale = random.randint(1, 3)
     print(numero_casuale)
     scelta_giocatore = input(f'{nome_giocatore} scegli una nuova mossa: ')
+#Se avviene nuovamente un pareggio il gioco non da l'input giusto da rivedere!!!
 
 if (scelta_giocatore == 1 and numero_casuale == 3) or (scelta_giocatore == 2 and numero_casuale == 1) or (scelta_giocatore == 3 and numero_casuale == 2):
     print(f"{nome_giocatore} hai vinto!!")
 
 else:
     print(f"Mi dispiace {nome_giocatore}, ha vinto Mr. Python!")
+
+
+#Come faccio a farlo andare in loop?
 
 """risposta_giocatore = input(f"{nome_giocatore} Vuoi rigiocare? (si/no): ")
 
