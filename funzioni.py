@@ -14,3 +14,9 @@ def divisione(a,b):
     print(f"il valore della tua divisione è {div}")
 
 divisione(4,12)
+
+#funzione lambda
+
+quadrato = lambda x: (x / 2)* 3 - 5
+print(quadrato(4))
+print(quadrato(5))
