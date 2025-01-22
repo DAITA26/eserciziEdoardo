@@ -66,7 +66,7 @@ class DataDiNascita:
         self.conversione_giorno()
         self.gg = str(self.gg)
         return self.aa + self.mm + self.gg
-class
+#class
 
 
 
@@ -84,7 +84,7 @@ class
 
 
 
-#self.surname.find(self.vocali)
+# self.surname.find(self.vocali)
 
 
 obj= StringaDiTesto("CERIONI", "DOMENICO")#debug
