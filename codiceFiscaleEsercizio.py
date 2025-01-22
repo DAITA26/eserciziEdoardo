@@ -1,5 +1,6 @@
 from os.path import split
 
+codicicatastali = {"ROMA": "H501", "REGGIOCALABRIA": "H224", "CATANIA": "C351"  }
 
 # Nome e cognome (primi 6 caratteri)
 class StringaDiTesto:
@@ -49,7 +50,6 @@ class DataDiNascita:
         self.gg, self.mm, self.aa = self.data.split("/")
         #print(self.data.split("/"))debug
         #print(self.gg + " " + self.mm + " " + self.aa)debug
-        self.gg = int(self.gg)
         self.aa = self.aa[2:]
     def conversione_mese(self):
         mesi = ("A","B","C","D","E","H","L","M","P","R","S","T")
@@ -57,6 +57,7 @@ class DataDiNascita:
         #print(self.mm)debug
     def conversione_giorno(self):
         if self.sesso == "femmina":
+            self.gg = int(self.gg)
             self.gg = self.gg + 40
         #print(self.gg)debug
     def stringa_data(self):
@@ -65,6 +66,7 @@ class DataDiNascita:
         self.conversione_giorno()
         self.gg = str(self.gg)
         return self.aa + self.mm + self.gg
+class
 
 
 
@@ -89,8 +91,12 @@ obj= StringaDiTesto("CERIONI", "DOMENICO")#debug
 print(f"I primi 3 caratteri del codice fiscale sono {obj.check_caratteri(False)}")#debug
 print(f"I secondi 3 caratteri del codice fiscale sono {obj.check_caratteri(True)}")#debug
 
-obj2= DataDiNascita("27/10/1996", "maschio")
+obj2= DataDiNascita("07/10/1996", "femmina")
 print(f'I caratteri della data nel codice fiscale sono {obj2.stringa_data()}')
+
+print(obj.check_caratteri(False) + obj.check_caratteri(True) + obj2.stringa_data())
+
+
 
 
 
