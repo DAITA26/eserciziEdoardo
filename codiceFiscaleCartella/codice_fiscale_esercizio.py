@@ -1,4 +1,5 @@
 from codici_catastali import codicicatastali
+from dizionario_carattere_dicontrollo import dicpari, dicdispari, tupresto
 
 # Nome e cognome (primi 6 caratteri)
 class StringaDiTesto:
@@ -69,6 +70,19 @@ class ComuneDiNascita:
         self.comune = comune
     def conversione_catastale(self):
         return codicicatastali.get(self.comune)
+class CarattereDiControllo:
+    def __init__(self, stringa):
+        self.stringa = stringa
+    def calcolocarcontr(self):
+        contatore = 0
+        pari = []
+        dispari = []
+        for caratteri in stringa:
+            contatore += 1
+            if contatore % 2 == 0:
+                pari.append(caratteri)
+            else:
+                dispari.append(caratteri)
 
 
 
@@ -87,7 +101,8 @@ class ComuneDiNascita:
 
 
 
-# self.surname.find(self.vocali)
+
+    # self.surname.find(self.vocali)
 
 
 obj= StringaDiTesto("CERIONI", "DOMENICO")#debug
@@ -101,9 +116,8 @@ print(f'I caratteri della data nel codice fiscale sono {obj2.stringa_data()}')
 
 obj3= ComuneDiNascita("CANTU")
 print(f"il tuo comune di nascita corrisponde al seguente codice catastale {obj3.conversione_catastale()}")
-
-print(obj.check_caratteri(False) + obj.check_caratteri(True) + obj2.stringa_data() + obj3.conversione_catastale())
-
+stringa = obj.check_caratteri(False) + obj.check_caratteri(True) + obj2.stringa_data() + obj3.conversione_catastale()
+print(stringa)
 
 
 
