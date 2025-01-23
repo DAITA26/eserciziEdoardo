@@ -64,7 +64,12 @@ class DataDiNascita:
         self.conversione_giorno()
         self.gg = str(self.gg)
         return self.aa + self.mm + self.gg
-#class
+class ComuneDiNascita:
+    def __init__(self, comune):
+        self.comune = comune
+    def conversione_catastale(self):
+        return codicicatastali.get(self.comune)
+
 
 
 
@@ -92,10 +97,12 @@ print(f"I secondi 3 caratteri del codice fiscale sono {obj.check_caratteri(True)
 obj2= DataDiNascita("07/10/1996", "femmina")
 print(f'I caratteri della data nel codice fiscale sono {obj2.stringa_data()}')
 
-print(obj.check_caratteri(False) + obj.check_caratteri(True) + obj2.stringa_data())
 
 
+obj3= ComuneDiNascita("CANTU")
+print(f"il tuo comune di nascita corrisponde al seguente codice catastale {obj3.conversione_catastale()}")
 
+print(obj.check_caratteri(False) + obj.check_caratteri(True) + obj2.stringa_data() + obj3.conversione_catastale())
 
 
 
