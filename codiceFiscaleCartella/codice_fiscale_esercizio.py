@@ -1,6 +1,4 @@
-from os.path import split
-
-codicicatastali = {"ROMA": "H501", "REGGIOCALABRIA": "H224", "CATANIA": "C351"  }
+from codici_catastali import codicicatastali
 
 # Nome e cognome (primi 6 caratteri)
 class StringaDiTesto:
